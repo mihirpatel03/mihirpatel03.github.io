@@ -1,60 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Personal website of Mihir Patel — Mathematics & Computer Science student researching algorithms and complexity.">
   <title>Mihir Patel</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <h1>Mihir Patel</h1>
     <p>Mathematics & Computer Science | Research in Algorithms & Complexity</p>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#about">About</a>
-      <a href="#research">Research</a>
+      <a href="#preprints">Preprints</a>
+      <a href="#undergrad-projects">Undergrad Projects</a>
       <a href="#teaching">Teaching</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="profile.jpg" alt="Mihir Patel photo">
-    <p>Hi, I’m Mihir! I’m a mathematics and computer science student passionate about algorithms, 
-    complexity theory, and their applications in research. I’m beginning my MSc in Mathematics 
-    and Foundations of Computer Science at the University of Oxford in Fall 2025, after completing 
-    my BS in Mathematics and Computer Science at Haverford College.</p>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="profile.jpg" alt="Portrait of Mihir Patel" width="200">
+      <p>I am an incoming MSc student in the Mathematics and Foundations of Computer Science program
+        at Oxford (2025–2026 cohort). I earned my BS in Mathematics and Computer Science from Haverford
+        College in May 2025. My research interests are in algorithms and computational complexity,
+        with a particular focus on approximation algorithms, graph problems, and parameterized complexity.</p>
+    </section>
 
-  <section id="research">
-    <h2>Research Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> Balancing node centrality in social networks — proved hardness results 
-      and developed approximation algorithms. Culminated in a preprint with collaborators at the University of Utah.</li>
-      <li><strong>Project 2:</strong> Investigated parameterized algorithms for the 2-edge-connected spanning subgraph 
-      problem with Georgetown University’s Algorithms group.</li>
-      <li><strong>Project 3:</strong> Improved selection algorithms for finding the kth order statistic 
-      (Quickselect pivoting strategies) under supervision at George Washington University.</li>
-    </ul>
-  </section>
+    <section id="preprints">
+      <h2>Preprints</h2>
+      <ul>
+        <li>
+          <strong><a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener noreferrer">
+              Title of the Paper
+            </a></strong>
+          <br>
+          Authors: [to be added]
+        </li>
+      </ul>
+    </section>
 
-  <section id="teaching">
-    <h2>Teaching & Leadership</h2>
-    <p>I’ve worked as a Teaching Assistant for multiple CS courses at Haverford and Bryn Mawr Colleges, 
-    guiding students through algorithms and data structures. I also served as a board member of HaverCode, 
-    organizing events, workshops, and hackathons to support the CS community.</p>
-  </section>
+    <section id="undergrad-projects">
+      <h2>Some Projects from My Undergrad</h2>
 
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>You can download my CV here: <a href="Resume.pdf">Resume (PDF)</a></p>
-  </section>
+      <details>
+        <summary><em>Improving Network Fairness With Edge Addition</em></summary>
+        <p>Assuming information spreads along the edges of a social network, some nodes naturally have greater access to
+          information simply because of their position in the network, creating inherent advantage gaps. The problem I
+          studied asks whether we can add a limited number of edges to reduce these gaps (in particular, to equalize the
+          closeness centralities of two chosen nodes). This turns out to be NP-hard, so my work focused on designing
+          approximation algorithms and proving inapproximability results.</p>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mihirdpatel03@gmail.com">mihirdpatel03@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/mihirpatel03">mihirpatel03</a></p>
-  </section>
+        <p>This research formed my undergraduate thesis at Haverford, where I was fortunate to be advised by Dr. Sorelle
+          Friedler (CS) and Dr. Josh Sabloff (Math), and to collaborate with Dr. Blair Sullivan and her amazing Theory
+          in Practice group at the University of Utah.</p>
+
+        <p>I’ve included both my Math and CS thesis submissions – the Math version is geared toward a general math
+          audience, while the CS version has a more extensive literature review and assumes familiarity with concepts
+          from an undergraduate algorithms course.</p>
+      </details>
+
+      <details>
+        <summary><em>Improving Quickselect With Dynamic Pivot Selection</em></summary>
+        <p>The Quickselect algorithm efficiently finds the kth largest element in an unsorted list, running in expected
+          linear time. However, its performance depends heavily on selecting good “pivots” during recursion, elements
+          that ideally split the list roughly in half and minimize the size of the subproblem. In this project, I
+          proposed and implemented a dynamic pivot selection strategy, and compared this approach to Quickselect’s
+          standard method of choosing pivots at random, evaluating both on large random datasets.</p>
+
+        <p>My method produced more balanced partitions than Quickselect in practice, while remaining far simpler and
+          more implementable than the state-of-the-art Floyd–Rivest algorithm. I summarized my findings in a technical
+          article that you can find here. This work was advised by Dr. Amrinder Arora of George Washington University.
+        </p>
+      </details>
+
+      <details>
+        <summary><em>Comparing Bit and Time Efficiency of Coding Algorithms on Real World Data</em></summary>
+        <p>I analyzed the performance of three data compression algorithms – fixed-length encoding, Shannon coding, and
+          Huffman coding – using real-world text data. To evaluate bit efficiency, I examined how the entropy of each
+          scheme changed as the number of unique characters increased. For this, I wrote a program that generated large
+          alphabets by using hexadecimal representations, allowing me to test tens of thousands of unique characters
+          instead of being limited to the hundreds of characters available in ASCII.</p>
+
+        <p>I also evaluated time efficiency by measuring how quickly each scheme could encode and decode messages. The
+          results confirmed that Huffman consistently outperformed Shannon in practice, while fixed-length encoding was
+          less efficient overall, even in cases where our theoretical analysis suggested it might compete with Shannon
+          coding.</p>
+
+        <p>Here are some slides I created for a presentation on this topic.</p>
+      </details>
+
+      <details>
+        <summary><em>A Greedy Algorithm For Registrar Scheduling</em></summary>
+        <p>In this project, we designed a greedy algorithm to simulate the scheduling process a college registrar
+          performs – assigning rooms, professors, times, and students to classes without conflicts. The algorithm
+          ensures correctness (e.g., no double-bookings or schedule clashes) and incorporates realistic constraints,
+          such as department-specific rooms, minimizing course overlap within a major, and accommodating popular classes
+          over Zoom. We also proved the algorithm’s validity, analyzed its time complexity, and ran experiments to test
+          how well it satisfied student preferences. The results showed that the algorithm is both correct and
+          efficient, achieving on average over 80% of students placed into their preferred classes while handling
+          complex scheduling constraints.</p>
+      </details>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching & Leadership</h2>
+      <p>I have worked as a Teaching Assistant for multiple CS courses at Haverford and Bryn Mawr Colleges,
+        guiding students through algorithms and data structures. I also served as a board member of HaverCode,
+        organizing events, workshops, and hackathons to support the CS community.</p>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>You can download my CV here: <a href="Resume.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae
+          (PDF)</a></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:mihirdpatel03@gmail.com">mihirdpatel03@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/mihirpatel03" target="_blank" rel="noopener noreferrer">mihirpatel03</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mihir Patel</p>
+  </footer>
 </body>
+
 </html>
