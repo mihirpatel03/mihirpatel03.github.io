@@ -17,10 +17,12 @@ body {
 
 /* Header */
 header {
-  background: #1a1a1a;
-  color: white;
+  background: #f0f0f0;
+  /* lighter color */
+  color: #222;
   padding: 1.5rem;
   text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
 header h1 {
@@ -33,7 +35,7 @@ nav {
 }
 
 nav a {
-  color: #ddd;
+  color: #444;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
@@ -41,7 +43,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff;
+  color: #007acc;
 }
 
 /* Layout: sidebar + main content */
@@ -49,7 +51,8 @@ nav a:hover {
   display: flex;
   max-width: 1100px;
   margin: 2rem auto;
-  gap: 2rem;
+  gap: 3rem;
+  /* bigger gap to push sidebar further */
   width: 90%;
   flex: 1;
 }
@@ -58,6 +61,8 @@ nav a:hover {
 .sidebar {
   flex: 0 0 220px;
   text-align: center;
+  margin-left: 0;
+  /* aligned to far side */
 }
 
 .profile-pic {
@@ -84,12 +89,14 @@ nav a:hover {
 
 .sidebar .icons a:hover {
   color: #007acc;
-  /* highlight color */
 }
 
 /* Main content */
 main {
   flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  /* center text more */
 }
 
 main h2 {
@@ -139,20 +146,10 @@ a:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1a1a1a;
-  color: #aaa;
+  background: #f0f0f0;
+  color: #666;
   font-size: 0.9rem;
-}
-
-footer a {
-  color: #ddd;
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
-  transition: color 0.2s ease;
-}
-
-footer a:hover {
-  color: #fff;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsive */
@@ -164,6 +161,10 @@ footer a:hover {
 
   .sidebar {
     margin-bottom: 1.5rem;
+  }
+
+  main {
+    max-width: 100%;
   }
 
   nav a {
