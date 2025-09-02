@@ -1,89 +1,190 @@
-/* General layout */
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  max-width: 850px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.6;
-  background: #fafafa;
-  color: #222;
+/* =========================
+   Global Styles
+   ========================= */
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #333;
+  --accent-color: #004aad;
+  /* Oxford blue vibe */
+  --accent-hover: #002f6c;
+  --muted-color: #666;
+  --border-color: #ddd;
+  --card-bg: #fff;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --radius: 8px;
+  --max-width: 800px;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Merriweather", Georgia, serif;
 }
 
-/* Header */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================
+     Header & Navigation
+     ========================= */
 header {
+  background: var(--card-bg);
   text-align: center;
-  padding: 2em 0;
+  padding: 2rem 1rem;
+  box-shadow: var(--shadow);
 }
 
 header h1 {
-  font-size: 2.2em;
-  margin-bottom: 0.3em;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
 }
 
 header p {
-  font-size: 1.1em;
-  color: #555;
+  color: var(--muted-color);
+  margin-bottom: 1rem;
 }
 
-/* Navigation */
 nav {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 nav a {
-  margin: 0 12px;
+  margin: 0 0.75rem;
   text-decoration: none;
-  color: #0366d6;
+  color: var(--accent-color);
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--accent-hover);
 }
 
-/* Sections */
+/* =========================
+     Main Content
+     ========================= */
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  width: 90%;
+  margin: 2rem auto;
+}
+
 section {
-  margin-bottom: 3em;
+  margin-bottom: 2.5rem;
 }
 
 section h2 {
-  font-size: 1.6em;
-  margin-bottom: 0.5em;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.2em;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.25rem;
 }
 
-/* Profile image */
+section p,
+section li {
+  margin-bottom: 1rem;
+}
+
 img {
-  max-width: 180px;
   border-radius: 50%;
+  max-width: 180px;
   display: block;
-  margin: 0 auto 1em auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 1rem;
 }
 
-/* Lists (for research projects) */
+/* =========================
+     Lists & Links
+     ========================= */
 ul {
-  padding-left: 1.2em;
+  list-style: none;
+  padding-left: 0;
 }
 
 ul li {
-  margin-bottom: 0.8em;
+  background: var(--card-bg);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
 }
 
-/* Links */
 a {
-  color: #0366d6;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 a:hover {
-  color: #024e9f;
+  text-decoration: underline;
 }
 
-/* Footer (optional if you want to add later) */
+/* =========================
+     Details / Dropdown Projects
+     ========================= */
+details {
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease;
+}
+
+details[open] {
+  background: #f8faff;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent-color);
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+  /* remove default triangle */
+}
+
+details p {
+  margin-top: 0.75rem;
+  color: var(--text-color);
+}
+
+/* =========================
+     Footer
+     ========================= */
 footer {
   text-align: center;
-  font-size: 0.9em;
-  color: #777;
-  margin-top: 3em;
+  padding: 1rem;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--accent-hover);
 }

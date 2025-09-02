@@ -60,7 +60,7 @@
         <p>Assuming information spreads along the edges of a social network, some nodes naturally have greater access to
           information simply because of their position in the network, creating inherent advantage gaps. The problem I
           studied asks whether we can add a limited number of edges to reduce these gaps (in particular, to equalize the
-          closeness centralities of two chosen nodes). This turns out to be NP-hard, so my work focused on designing
+          closeness centralities of two given nodes). This turns out to be NP-hard, so my work focused on designing
           approximation algorithms and proving inapproximability results.</p>
 
         <p>This research formed my undergraduate thesis at Haverford, where I was fortunate to be advised by Dr. Sorelle
@@ -80,11 +80,11 @@
         <p>The Quickselect algorithm efficiently finds the kth largest element in an unsorted list, running in expected
           linear time. However, its performance depends heavily on selecting good “pivots” during recursion, elements
           that ideally split the list roughly in half and minimize the size of the subproblem. In this project, I
-          proposed and implemented a dynamic pivot selection strategy, and compared this approach to Quickselect’s
+          proposed and implemented a dynamic pivot selection strategy, and compared this approach to Quickselect's
           standard method of choosing pivots at random, evaluating both on large random datasets.</p>
 
         <p>My method produced more balanced partitions than Quickselect in practice, while remaining far simpler and
-          more implementable than the state-of-the-art Floyd–Rivest algorithm. I summarized my findings in
+          more implementable than the state-of-the-art Floyd-Rivest algorithm. I summarized my findings in
           <a href="https://medium.com/@mihirdpatel/improving-quickselect-with-dynamic-pivot-selection-8ddf584ded80"
             target="_blank" rel="noopener noreferrer">this technical article</a>, and was advised by Dr. Amrinder Arora
           of George Washington University.
@@ -93,8 +93,8 @@
 
       <details>
         <summary><em>Comparing Bit and Time Efficiency of Coding Algorithms on Real World Data</em></summary>
-        <p>I analyzed the performance of three data compression algorithms – fixed-length encoding, Shannon coding, and
-          Huffman coding – using real-world text data. To evaluate bit efficiency, I examined how the entropy of each
+        <p>I analyzed the performance of three data compression algorithms (fixed-length encoding, Shannon coding, and
+          Huffman coding) using real-world text data. To evaluate bit efficiency, I examined how the entropy of each
           scheme changed as the number of unique characters increased. For this, I wrote a program that generated large
           alphabets by using hexadecimal representations, allowing me to test tens of thousands of unique characters
           instead of being limited to the hundreds of characters available in ASCII.</p>
@@ -111,14 +111,14 @@
       <details>
         <summary><em>A Greedy Algorithm For Registrar Scheduling</em></summary>
         <p>In this project, we designed a greedy algorithm to simulate the scheduling process a college registrar
-          performs – assigning rooms, professors, times, and students to classes without conflicts. The algorithm
+          performs -- assigning rooms, professors, times, and students to classes without conflicts. The algorithm
           ensures correctness (e.g., no double-bookings or schedule clashes) and incorporates realistic constraints,
           such as department-specific rooms, minimizing course overlap within a major, and accommodating popular classes
-          over Zoom. We also proved the algorithm’s validity, analyzed its time complexity, and ran experiments to test
-          how well it satisfied student preferences. The results showed that the algorithm is both correct and
-          efficient, achieving on average over 80% of students placed into their preferred classes while handling
-          complex scheduling constraints. Our work is summarized in <a href="files/registrar-problem.pdf"
-            target="_blank" rel="noopener noreferrer">this write-up</a>.</p>
+          over Zoom. We also analyzed the algorithm's time complexity, and ran experiments to test
+          how well it satisfied student preferences -- on average over 80% of students were placed into their preferred
+          classes while handling complex scheduling constraints. Our work is summarized in
+          <a href="files/registrar-problem.pdf" target="_blank" rel="noopener noreferrer">this write-up</a>.
+        </p>
 
 
       </details>
